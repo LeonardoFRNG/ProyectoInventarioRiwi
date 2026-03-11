@@ -1,2 +1,2 @@
 # ProyectoInventarioRiwi
-proyecto de un inventario en python para riwi
+proyecto de un inventario en python para riwi, y pruebas en git
