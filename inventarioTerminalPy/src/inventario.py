@@ -1,37 +1,35 @@
-#solicitar el nombre del producto al usuario
 name = input("Ingrese el nombre del producto: ")
 
-#este while repite la pregunta al usuario siempre que ingrese un valor incorrecto
-while True:
-    
-    #este try atrapa lo que el user ingresa y si la variable no es correcta entonces pasa al except mostrando el menaje de error y el ciclo se repite, ya que nunca hubo break.
+precio = None
+
+while precio is None:
     try:
-        #solictamos dato al usuario
-        precio = float(input("Ingrese el precio del producto: "))
-        if precio <0:
-            print("Por favor ingrese valores numericos positivos.")
-            continue
-        break
-    except ValueError:
-        print("Por favor ingrese solo valores numericos.")
+        valor = float(input("Ingrese el precio del producto: "))
         
-while True:
-    #solicitar dato al usuario.  
+        if valor < 0:
+            print("El precio debe ser positivo")
+        else:
+            precio = valor
+            
+    except ValueError:
+        print("Ingrese solo números")
+
+
+cantidad = None
+
+while cantidad is None:
     try:
-        cantidad = int(input("Ingrese la cantidad del producto: "))
-        if cantidad <0:
-            print("Por favor, ingrese solo valores numericos positivos.")
-            continue
-        break
-    except ValueError:
-        print("Ingrese solo valores numericos")
+        valor = int(input("Ingrese la cantidad: "))
         
-#costo total, calculo
+        if valor < 0:
+            print("La cantidad debe ser positiva")
+        else:
+            cantidad = valor
+            
+    except ValueError:
+        print("Ingrese solo números")
 
-costo_total = precio * cantidad
 
-#se imprime el nombre, precio, cantidad y el total del producto y se muestra por consola.add()
+total = precio * cantidad
 
-print(
-    f"Producto: {name} | precio: {precio} | cantidad: {cantidad} | total: {costo_total}"
-)
+print(f"Producto: {name} | Precio: {precio} | Cantidad: {cantidad} | Total: {total}")
