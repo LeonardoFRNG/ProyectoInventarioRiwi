@@ -1,35 +1,35 @@
 name = input("Ingrese el nombre del producto: ")
 
-precio = None
+price= None
 
-while precio is None:
+while price is None:
     try:
-        valor = float(input("Ingrese el precio del producto: "))
+        value = float(input("Ingrese el precio del producto: "))
         
-        if valor < 0:
+        if value < 0:
             print("El precio debe ser positivo")
         else:
-            precio = valor
+            price = value
             
     except ValueError:
         print("Ingrese solo números")
 
 
-cantidad = None
+quantity = None
 
-while cantidad is None:
+while quantity is None:
     try:
-        valor = int(input("Ingrese la cantidad: "))
+        value = int(input("Ingrese la cantidad: "))
         
-        if valor < 0:
+        if value < 0:
             print("La cantidad debe ser positiva")
         else:
-            cantidad = valor
+            quantity = value
             
     except ValueError:
         print("Ingrese solo números")
 
 
-total = precio * cantidad
+total = price * quantity
 
-print(f"Producto: {name} | Precio: {precio} | Cantidad: {cantidad} | Total: {total}")
+print(f"Producto: {name} | Precio: {price} | Cantidad: {quantity} | Total: {total}")
